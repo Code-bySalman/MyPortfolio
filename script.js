@@ -1,4 +1,3 @@
-
 document.getElementById("submit_button").addEventListener("click", addRecommendation);
 
 function addRecommendation() {
@@ -22,5 +21,17 @@ function addRecommendation() {
     
     // Reset the value of the textarea
     recommendation.value = "";
+  }
+}
+
+function showPopup(bool, message) {
+  var popup = document.getElementById('popup');
+  var popupMessage = document.getElementById('popup_message');
+
+  if (bool) {
+    popup.style.visibility = 'visible';
+    popupMessage.textContent = message;
+  } else {
+    popup.style.visibility = 'hidden';
   }
 }
